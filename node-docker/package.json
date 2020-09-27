@@ -1,0 +1,21 @@
+{
+  "name": "node-docker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "docker run -d -p 8000:8000 --name rest-server node-docker",
+    "start:dev": "docker-compose -f docker-compose.dev.yml up --build",
+    "build-image": "docker build --tag node-docker .",
+    "list-images": "docker images",
+    "list-containers": "docker ps"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ronin-mocks": "^0.1.6",
+    "ronin-server": "^0.1.3"
+  }
+}
